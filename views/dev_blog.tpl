@@ -41,6 +41,8 @@
 				<div class="table-responsive">
 					<table class="table">
 					<b>Ver.01</b> - Initial version is out please note that the whole project is WIP.<br>
+					<b>Ver.02</b> - Initial blog structure created and other minor changes.<br>
+					<b>Ver.03</b> - First approach for the blog structure data, home page blog works, implemented MySQL server comunication and other changes. <br>
 					</table>
 				</div>
 			</div>

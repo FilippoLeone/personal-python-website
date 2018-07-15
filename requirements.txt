@@ -1,2 +1,2 @@
-bottle<1
+bottle
 mysqlclient

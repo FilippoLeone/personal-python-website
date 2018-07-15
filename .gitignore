@@ -261,3 +261,9 @@ __pycache__/
 *.pyc
 obj/
 env/
+bin/
+lib/
+pip-selfcheck.json
+pyvenv.cfg
+lib64
+db_credentials

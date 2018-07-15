@@ -12,7 +12,7 @@ class Tools:
         """
         Get current website version. default filename: 'version'
         """
-        if (system == "Linux" or system == "OSX"):
+        if (system() == "Linux" or system() == "OSX"):
             delimiter = "/"
         else:
             delimiter = "\\"
@@ -49,12 +49,12 @@ class Database:
         except:
             return "Nothing found."
 
-    def WritePost(cursor, Title, Text, WrittenBy, imagelink, Tags):
+    def WritePost(cursor, Title, Text, WrittenBy, imagelink, Tags, link):
         """
         Writing records to blog.blog_post
         """
         try:
-            cursor.execute("""INSERT INTO blog_post (title, text, username, imagelink, tags) VALUES (%s,%s,%s,%s,%s)""", (Title,Text,WrittenBy,imagelink,Tags))
+            cursor.execute("""INSERT INTO blog_post (title, text, username, imagelink, tags, link) VALUES (%s,%s,%s,%s,%s,%s)""", (Title,Text,WrittenBy,imagelink,Tags,link))
         except:
             return ("Error. I can't write a post with these info.")
 

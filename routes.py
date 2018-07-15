@@ -11,10 +11,36 @@ import json
 @route('/home')
 @view('index')
 def home():
-    tools = Tools
+    """
+    Homepage of the website that contains the database connection.
+    """
+
+    # Enstablishing the connection
+    with open("db_credentials","r") as blog_pw:
+        credentials = blog_pw.readline()
+    credentials = credentials.split(";;")
+    db = Database.ServerConnect("localhost", credentials[0], credentials[1], "blog", 3306)
+
+    results = Database.QuerySelect(db.cursor(), "blog_post", "*")
+    results = [list(results) for element in results]
+
     return dict(
+
         year=datetime.now().year,
-        version=tools.GetVersion('version')
+        version=Tools.GetVersion('version'),
+
+        # Tridimensional, getting -1 to obtain the latest news fetched from the database
+        blog_title_1 = results[0][-1][1],
+        blog_imagelink_1 = results[0][-1][5],
+        article_link_1 = results[0][-1][7],
+
+        blog_title_2 = results[0][-2][1],
+        blog_imagelink_2 = results[0][-2][5],
+        article_link_2 = results[0][-2][7],
+
+        blog_title_3 = results[0][-3][1],
+        blog_imagelink_3 = results[0][-3][5],
+        article_link_3 = results[0][-3][7],
     )
 
 @route('/contact')

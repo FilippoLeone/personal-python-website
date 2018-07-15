@@ -17,32 +17,37 @@
 <div class="alert alert-success">
    <strong>Dev Book:</strong> Version {{ version }} is now live please report any bug <a href="/contact" onclick="gtag('event', 'Click', {'event_category': 'Link', 'event_label': 'BugReport'});">here</a>.
 </div>
-
 <div class="container" style="padding-top:50px;">
 	<center><h2>Latest news from the blog</h2></center>
 	<div class="row" style="padding-top:25px;">
 		<div class="col-sm-4">
 			<div class="thumbnail">
-				<img src="/static/images/lights.jpg" alt="Lights" style="width:100%">
-				<div class="caption">
-					<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-				</div>
+				<a href="{{article_link_1}}">
+					<img src="{{blog_imagelink_1}}" alt="Lights" style="width:100%">
+					<div class="caption">
+						<p>{{blog_title_1}}</p>
+					</div>
+				</a>
 			</div>
 		</div>
 		<div class="col-sm-4">
 			<div class="thumbnail">
-				<img src="/static/images/lights.jpg" alt="Lights" style="width:100%">
-				<div class="caption">
-					<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-				</div>
+				<a href="{{article_link_2}}">
+					<img src="{{blog_imagelink_2}}" alt="Lights" style="width:100%">
+					<div class="caption">
+						<p>{{blog_title_2}}</p>
+					</div>
+				</a>
 			</div>
 		</div>
 		<div class="col-sm-4">
 			<div class="thumbnail">
-				<img src="/static/images/lights.jpg" alt="Lights" style="width:100%">
-				<div class="caption">
-					<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-				</div>
+				<a href="{{article_link_3}}">
+					<img src="{{blog_imagelink_3}}" alt="Lights" style="width:100%">
+					<div class="caption">
+						<p>{{blog_title_3}}</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>

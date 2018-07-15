@@ -35,12 +35,7 @@ if __name__ == '__main__':
         return bottle.static_file(filepath, root=STATIC_ROOT)
 
     # Starts a local test server.
-    try:
-        main.GetVersion()
-    except:
-        pass
-
+    #main.GetVersion()
     bottle.debug(True)
-    
     bottle.run(server='wsgiref', host=HOST, port=PORT)
     
