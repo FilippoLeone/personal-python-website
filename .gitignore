@@ -69,7 +69,11 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+*.sln
+*.pyproj
 
+# Website image
+website_template.png
 # Chutzpah Test files
 _Chutzpah*
 
